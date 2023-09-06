@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Financial Management</h1>
+<hr>
+<div style="justify-content: right;text-align: right;">
+    <a href="{{url_for('logout')}}" class="btn btn-danger">Log Out</a>
+</div>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Item</th>
+    </tr>
+    {% for i in abi %}
+    <tr>
+        <td>{{i.ID}}</td>
+        <td>{{i.Name}}</td>
+        <td>{{i.Email}}</td>
+        <td>{{i.Item}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends "base.html"%}
+
+{% block title%}Login Page{% endblock title %}
+
+{% block content %}
+
+<div class="content-section">
+    <form action="" method="post">
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Login Page</legend>
+            <div class="form-group">
+                <label class="form-control-label">Username</label>
+                <input type="text" placeholder="Enter the UserName" name="name" class="form-control form-control-lg">
+            </div>
+            <div class="form-group">
+                <label class="form-control-label">Password</label>
+                <input type="password" placeholder="Enter the Password" name="pass" class="form-control form-control-lg">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-outline-info">
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="broder-top pt-3">
+    <small class="test-muted">
+        Don't have an Account? <a href="{{url_for('signup')}}" class="ml=-2">Sign Up</a>
+    </small>
+
+</div>
+
+
+{% endblock content %}
